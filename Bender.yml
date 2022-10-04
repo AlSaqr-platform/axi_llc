@@ -13,7 +13,7 @@ dependencies:
   common_cells: { git: "https://github.com/pulp-platform/common_cells.git", version: 1.21.0 }
   common_verification: { git: "https://github.com/pulp-platform/common_verification.git", version: 0.2.0 }
   tech_cells_generic: { git: "https://github.com/pulp-platform/tech_cells_generic.git", version: 0.2.9 }
-
+  hyperbus: { git: "git@github.com:AlSaqr-platform/hyperbus.git", rev: "1e82e377a77ce8916fd3777da4fddb564fafea5f" }
 sources:
   # Source files grouped in levels. Files in level 0 have no dependencies on files in this
   # package. Files in level 1 only depend on files in level 0, files in level 2 on files in
@@ -52,4 +52,7 @@ sources:
     files:
       # Level 0:
       - test/tb_axi_llc.sv
+      - test/s27ks0641.v
+      - test/tb_mem_sub.sv
+      - test/tb_mem_arb.sv
 
