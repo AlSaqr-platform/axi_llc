@@ -31,11 +31,12 @@ documentation, and run various checks on the source code, various tools are requ
 Use `make doc` to build the documentation. The output is located at `doc/morty`.
 
 ### Simulation
-
+To fetch the dependencies, we use [bender](https://github.com/pulp-platform/bender). You can download the compiled binary and add it to your PATH env variable.
 We currently do not include any free and open-source simulation setup. However, if you have access to
 [*Questa advanced simulator*](https://eda.sw.siemens.com/en-US/ic/questa/simulation/advanced-simulator/),
 a simulation can be launched using:
 ```
+sh> bender update
 sh> make scripts/compile_vsim.tcl
 sh> questa-2021.3 vsim -64
 vsim> source scripts/compile_vsim.tcl
@@ -43,5 +44,6 @@ vsim> source scripts/start_vsim.tcl
 vsim> do scripts/waves/tb_axi_llc.vsim.do
 vsim> run -all
 ```
-
 The simulation should complete after 53.168ms.
+
+In case you want to simulate LLC+Hyper `vsim> source scripts/start_vsim_mem.tcl`. For MUX+LLC+Hyper `vsim> source scripts/start_vsim_arb_mem.tcl`.
