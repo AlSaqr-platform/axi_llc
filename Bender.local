@@ -1,0 +1,2 @@
+overrides:
+  axi: { git: "https://github.com/alsaqr-platform/axi.git", rev: 05d98b03916067d3055c5904eceb9f131f54bb17 }

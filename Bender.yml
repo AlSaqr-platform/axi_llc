@@ -9,7 +9,8 @@ package:
     - "Wolfgang Roenninger <wroennin@ethz.ch>"
 
 dependencies:
-  axi: { git: "https://github.com/pulp-platform/axi.git", version: 0.39.0-beta.2 }
+  axi: { git: "https://github.com/alsaqr-platform/axi.git", rev: 05d98b03916067d3055c5904eceb9f131f54bb17 }
+  hyperbus: { git: "https://github.com/pulp-platform/hyperbus.git", version: 0.0.3 }
   common_cells: { git: "https://github.com/pulp-platform/common_cells.git", version: 1.21.0 }
   common_verification: { git: "https://github.com/pulp-platform/common_verification.git", version: 0.2.0 }
   register_interface: { git: "https://github.com/pulp-platform/register_interface.git", version: 0.3.6 }
@@ -58,5 +59,7 @@ sources:
       - test
     files:
       # Level 0:
+      - s27ks0641/s27ks0641.v
+      - test/tb_axi_llc_hyperbus.sv
       - test/tb_axi_llc.sv
 
