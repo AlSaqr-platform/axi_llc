@@ -126,7 +126,8 @@ module axi_llc_ax_master #(
     chan_valid_d    = chan_valid_q;
     load_chan_valid = 1'b0;
     // assign the right channel values to the flip flop
-    chan_d.id    = id_mst_t'(axi_llc_pkg::AxReqId);
+    // chan_d.id    = id_mst_t'(axi_llc_pkg::AxReqId);
+    chan_d.id       = desc_i.a_x_id;
     if (cache_unit == axi_llc_pkg::EvictUnit) begin
       chan_d.addr = evict_addr;
     end else begin
