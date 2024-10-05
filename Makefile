@@ -207,3 +207,9 @@ misc_clean:
 
 nuke: clean
 	rm -rf .bender
+	
+# --------------
+# Run test
+# --------------
+run_test:
+	vsim -do "source scripts/compile_vsim.tcl; source scripts/start_vsim.tcl; run -all"
